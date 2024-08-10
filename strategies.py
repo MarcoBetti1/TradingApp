@@ -320,19 +320,3 @@ def strategy_local_extrema(portfolio, data, ticker_symbol, window=10, confirmati
 
     return portfolio_values
 
-# def strategy_sell_at_high_buy_at_low(portfolio, data, ticker_symbol):
-#     portfolio_values = []
-#     low = high = data.iloc[0]['Open']
-#     portfolio_values.append(portfolio.get_portfolio_balance({ticker_symbol: high}))
-#     for i in range(1, len(data)):
-#         price = data.iloc[i]['Close']
-#         if price > high:
-#             high = price
-#             quantity = portfolio.stocks.get(ticker_symbol, 0)
-#             portfolio.sell_stock(ticker_symbol, quantity, price)
-#         elif price < low:
-#             low = price
-#             quantity = portfolio.balance // price
-#             portfolio.buy_stock(ticker_symbol, quantity, price)
-#         portfolio_values.append(portfolio.get_portfolio_balance({ticker_symbol: price}))
-#     return portfolio_values

@@ -1,1 +1,0 @@
-to load from requirements: pip install -r requirements.txt
